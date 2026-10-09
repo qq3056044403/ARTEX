@@ -60,3 +60,9 @@ require (
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.11.0 // indirect
 )
+
+// 本地 vendor 的 norma 副本。上游仓库（Autumn-27/norma）已不可达，且我们需要
+// 修复 Windows 上 shellCmd() 强制用 PowerShell 的问题 —— agent 写的 curl -sk /
+// heredoc / grep 在 PowerShell 下全废。改动在 third_party/norma/tool/task.go，
+// 通过 NORMA_SHELL 环境变量覆盖默认 shell。
+replace github.com/Autumn-27/norma => ./third_party/norma

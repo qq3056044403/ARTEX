@@ -58,3 +58,6 @@ Thumbs.db
 /bench/
 /Dockerfile.bench
 /Dockerfile.bench.v2
+# 本地构建产物与日志（不入库）
+artex.exe
+artex.log
